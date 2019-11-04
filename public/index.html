@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
 
   <title>AR Demo</title>
   <meta name="description" content="ar-demo">
   <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 
 </head>
@@ -12,16 +13,14 @@
 <body style='margin : 0px; overflow: hidden;'>
 
   <a-scene embedded arjs='sourceType: webcam;'>
-
+  <!-- <a-scene> -->
     <a-assets>
       <a-asset-item id="model" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"/>
     </a-assets>
 
-    <a-box src="https://ricardojdb.github.io/images/avatar-meta.jpg" position='0 0.5 0'></a-box>
-
-    <!-- <a-entity gltf-model="#model" scale="10 10 10" rotation="270 0 0"></a-entity> -->
-
-    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-marker-camera preset='hiro'>
+        <a-box src="https://ricardojdb.github.io/images/avatar-meta.jpg" rotation="0 0 0" position="0 0.5 0" depth="1" height="0.1" width="1"></a-box>
+    </a-marker-camera>
   </a-scene>
 </body>
 
