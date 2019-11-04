@@ -1,1 +1,1 @@
-# aFrame-ARjs Demo
+# aFrame Demo
